@@ -1,6 +1,6 @@
 ## 브라우저와 자바스크립트 엔진
 
-![alt text](./2/image.png)
+![alt text](./img/2/image.png)
 
 1. 주요 브라우저 종류  
   Google Chrome, Apple Safari, Firefox, Opera, Microsoft Edge, Naver Whale
