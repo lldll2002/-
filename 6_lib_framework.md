@@ -18,3 +18,12 @@
 | 자바스크립트 라이브러리 | 특정 기능을 수행하는 함수나 도구들의 집합. 개발자가 필요한 부분만 선택하여 사용할 수 있음. | jQuery, Lodash, Axios |
 | 프론트엔드 프레임워크 | 클라이언트 사이드에서 사용되며, 사용자 인터페이스를 구축하는 데 사용됩니다. | ReactJS, Vue, Svelte |
 | 서버 프레임워크 | 서버 사이드 로직을 처리하며, 주로 API 서버, 웹 애플리케이션 서버 등을 구축하는 데 사용됩니다. | NestJS, ExpressJS, Koa, Meteor |
+
+***
+
+- npm trends  
+  https://npmtrends.com/angular-vs-react-vs-svelte-vs-vue
+
+- State of JavaScript  
+  https://stateofjs.com/en-US  
+  https://stateofcss.com/en-US  
