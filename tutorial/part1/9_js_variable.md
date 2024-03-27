@@ -107,3 +107,61 @@ ice = coffee;             // coffee 변수의 값을 복사해서 ice 변수에 
 
 console.log(`coffee : ${coffee}, ice : ${ice}`);
 ```
+
+***
+
+## 자바스크립트 메모리 관리 (Memory management, Garbage collection)
+
+1. 프로그래밍 언어
+
+| 유형 | 설명 |
+|------|------|
+| 저수준 프로그래밍 언어 (Low-level programming language) | 일반적으로 [기계어](https://ko.wikipedia.org/wiki/%EA%B8%B0%EA%B3%84%EC%96%B4)와 [어셈블리어](https://ko.wikipedia.org/wiki/%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%EC%96%B4)에 해당하며, 실행 속도가 매우 빠르지만 러닝커브가 높고 유지보수가 힘든 것이 단점입니다. |
+| 고수준 프로그래밍 언어 (High-level programming language) | 사람이 쉽게 이해할 수 있도록 설계되어 가독성이 높고 다루기 간단한 장점이 있으며, [컴파일러](https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC)나 [인터프리터](https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0)에 의해 저수준 프로그래밍 언어로 번역되어 실행됩니다. |
+
+2. 메모리 생존주기
+
+메모리 생존주기는 대부분의 프로그래밍 언어에서 사용함
+
+| 단계 | 설명 | 비고 |
+|------|------|------|
+| 1. 할당 | 필요할 때 메모리를 할당합니다. | 고수준 언어에서는 대부분 암묵적으로 할당됩니다. |
+| 2. 사용 | 할당된 메모리를 사용합니다 (읽기, 쓰기). | 모든 프로그래밍 언어에서 명시적으로 사용됩니다. |
+| 3. 해제 | 더 이상 필요하지 않을 때 메모리를 해제합니다. | 고수준 언어에서는 대부분 암묵적으로 해제됩니다. |
+
+1. 자바스크립트 메모리
+
+[자바스크립트 메모리 관리](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_management) 는 가비지 컬렉션에 의해 관리됩니다. 가비지 컬렉션은 JavaScript는 객체가 생성되었을 때 자동으로 메모리를 할당하고 더 이상 필요하지 않을 때 자동으로 해제합니다.
+
+- 자바스크립트 메모리 할당 예제
+
+```js
+// 기본형 데이터(정수, 문자열) 할당
+const count = 123;  // 정수 할당
+const coffee = "커피";  // 문자열 할당
+
+// 객체 할당 - 객체와 그 속성들을 위한 메모리 할당
+const cafe = { starbucks: 1, ediya: null };
+
+// 배열 할당 - 배열과 그 요소들을 위한 메모리 할당
+const tea = [1, null, "밀크티"];
+
+// 함수 할당 - 함수는 호출 가능한 객체로, 메모리에 할당됨
+function bread(a) {
+  return a + 2;
+}
+
+// 익명 함수 할당 - 이벤트 리스너에서 사용될 익명 함수를 메모리에 할당
+someElement.addEventListener(
+  "click",
+  () => { someElement.style.backgroundColor = "blue"; },
+  false
+);
+
+// Date 객체 할당 - Date 객체 인스턴스를 위한 메모리 할당
+const studyDay = new Date();
+
+// DOM 엘리먼트 할당 - 새로운 div 엘리먼트를 생성하고 메모리에 할당
+const selectDiv = document.createElement("div");
+
+```

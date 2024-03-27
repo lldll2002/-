@@ -66,7 +66,7 @@
   | 단축키로 열기 | F12 (Window), Cmd+Opt+I (Mac) |
   | 탭 내용 | 요소 선택(아이콘), 디바이스(아이콘), Elements, Console, Sources |
 
-  ![alt text](./img/8/image.png)
+  ![alt text](../img/8/image.png)
 
 <br/>
 
