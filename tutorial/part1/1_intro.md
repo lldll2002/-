@@ -37,3 +37,31 @@
   - HTML/CSS와의 통합 : 웹 개발에서 쉽게 통합되며, 모든 주요 브라우저에서 지원합니다.
   - 다양한 디바이스에서의 사용 : 브라우저, 서버, 모바일 등 다양한 환경에서 사용 가능합니다.
   - 독립적 언어 : [ECMAScript](https://ko.wikipedia.org/wiki/ECMA%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8) 명세를 기반으로 하며, [Java](https://namu.wiki/w/Java) 언어와는 다릅니다.
+
+<br/><br/>
+
+## Nodejs
+
+Node.js는 JavaScript를 브라우저 밖, 즉 서버 사이드에서 실행할 수 있게 해주는 환경입니다. 
+
+- 서버 사이드 JavaScript  
+원래 브라우저에서만 실행되던 JavaScript를 서버 사이드에서도 실행할 수 있게 합니다. 이를 통해 웹 서버, RESTful API, 실시간 서비스 등을 구축할 수 있습니다.
+
+- 단일 언어 사용  
+프론트엔드와 백엔드 모두 JavaScript를 사용할 수 있어 개발 프로세스가 간소화되고, 팀 간 협업이 용이해집니다.
+
+- 비동기 I/O 처리  
+Node.js는 비동기 이벤트 기반 아키텍처를 사용하여 효율적인 동시성 처리와 빠른 I/O 작업을 제공합니다.
+
+- 대규모 커뮤니티와 라이브러리  
+NPM(Node Package Manager)을 통해 수많은 오픈소스 라이브러리와 모듈에 쉽게 접근할 수 있습니다. 이는 개발 속도를 크게 향상시킵니다.
+
+- 다양한 용도  
+웹 애플리케이션뿐만 아니라 데스크톱 애플리케이션(예: Electron), 모바일 애플리케이션(React Native와 함께 사용), 클라우드 컴퓨팅, IoT(Internet of Things) 등 다양한 분야에서 활용됩니다.
+
+- 크로스 플랫폼  
+Windows, macOS, Linux 등 다양한 운영 체제에서 실행할 수 있습니다.
+
+> NodeJS 설치  
+https://nodejs.org/en/download  
+`Download Node.js`
