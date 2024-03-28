@@ -178,3 +178,154 @@ bakeBreadArrow.apply(bakery); // 출력: 🥖 undefined 빵이 구워졌습니�
 const boundBreadFunctionArrow = bakeBreadArrow.bind(bakery);
 boundBreadFunctionArrow(); // 출력: 🥖 undefined 빵이 구워졌습니다. 맛은 undefined입니다.
 ```
+
+## 재귀함수
+
+| 재귀(Recursion) |
+|------------------|
+| 재귀는 함수가 자기 자신을 호출하는 것을 의미합니다. |
+| 재귀는 보통 함수 내에서 어떤 작업을 반복하면서 처리할 때 사용됩니다. |
+| 재귀 함수는 종료 조건을 반드시 가져야 합니다. 종료 조건이 없으면 함수가 무한히 호출되어 스택 오버플로우와 같은 문제가 발생할 수 있습니다. |
+
+
+팩토리얼은 양의 정수 n에 대해 n부터 1까지의 모든 정수를 곱한 값을 의미합니다. 일반적으로 n!으로 표기하며, 수학적으로는 다음과 같이 정의됩니다.
+
+`n! = n × (n - 1) × (n - 2) × ... × 2 × 1`
+
+예를 들어, 5!는 다음과 같이 계산됩니다.
+
+`5! = 5 × 4 × 3 × 2 × 1 = 120`
+
+팩토리얼은 조합론 및 확률론에서 자주 사용되며, 알고리즘 및 프로그래밍 연습에서도 자주 등장합니다.
+
+```js
+function factorial(n) {
+  // 종료 조건: n이 1 이하일 때 1을 반환
+  if (n <= 1) {
+    return 1;
+  }
+  // 재귀 호출: n에 대한 팩토리얼을 구하고 n을 곱함
+  return n * factorial(n - 1);
+}
+
+// 팩토리얼 계산 예제
+console.log(factorial(5)); // 출력: 120
+
+function factorial(n) {
+  // 종료 조건: n이 1 이하일 때, 1을 반환
+  if (n <= 1) {
+    return 1;
+  }
+  // 재귀 호출: n에 대한 팩토리얼을 구하고 n을 곱함
+  return n * factorial(n - 1);
+}
+
+// 팩토리얼 계산 예제
+console.log(factorial(3)); // 출력: 6
+
+```
+
+## Class
+
+- JavaScript에서 클래스(class)는 객체 생성을 위한 템플릿으로 사용됩니다.
+- 객체 지향 프로그래밍의 중요한 구성 요소인 클래스는 데이터(속성)와 이를 조작하는 메서드를 하나의 단위로 묶어 관리합니다.
+- 클래스는 특정 데이터 구조와 관련된 기능을 함께 캡슐화하고 구조화하는 중요한 역할을 수행합니다.
+- 자바스크립트에서, 클래스는 기술적으로 함수의 한 종류로 간주됩니다.
+
+| 개념 | 설명 |
+|------|------|
+| 생성자(Constructor) | 클래스를 통해 객체가 생성될 때 자동으로 호출되는 특별한 메서드입니다. 일반적으로 객체의 초기 상태를 설정하는 데 사용됩니다. |
+| 속성(Properties) | 클래스에 의해 생성된 객체들이 가질 수 있는 변수나 데이터입니다. |
+| 메서드(Methods) | 클래스 내에서 정의된 함수로, 클래스가 가지고 있는 데이터를 조작하거나 계산하는 데 사용됩니다. |
+| 상속(Inheritance) | 한 클래스가 다른 클래스의 특성을 상속받아 사용할 수 있습니다. 이를 통해 코드의 재사용성과 유지보수성이 향상됩니다. |
+| 캡슐화(Encapsulation) | 데이터(속성)와 그 데이터를 조작하는 메서드를 하나로 묶음으로써 정보 은닉을 가능하게 합니다. |
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name}`;
+  }
+}
+
+const person = new Person("Alice");
+console.log(typeof Person);  // "function"
+console.log(person.greet()); // "Hello, my name is Alice"
+```
+
+- 클래스 선언과 표현식
+
+| 구분 | 방법 | 설명 |
+|------|------|------|
+| 클래스 선언 | `class MyClass {}` | 클래스 선언은 `class` 키워드 다음에 클래스 이름을 명시하고, 중괄호(`{}`) 안에 클래스의 속성과 메서드를 정의하는 방식입니다. |
+| 클래스 표현식 | `const MyClass = class {}` | 클래스 표현식은 클래스를 변수에 할당하는 방식입니다. 클래스에 이름을 주거나 이름을 생략할 수 있으며, 이는 함수 표현식과 유사합니다. |
+
+클래스 정의는 클래스 선언(class MyClass {}) 또는 클래스 표현식(const MyClass = class {})을 통해 이루어지며, 이는 함수를 정의하는 방법과 유사합니다. 자바스크립트의 클래스는 객체 지향적인 프로그래밍 접근을 가능하게 하는 함수 기반의 구조로 볼 수 있습니다.
+
+- 클래스와 함수의 관계
+
+| 주제 | 설명 |
+|------|------|
+| 클래스는 함수의 확장 | 자바스크립트에서 클래스는 사실상 '특별한 형태의 함수'입니다. 클래스 선언(`class MyClass {}`) 또는 클래스 표현식(`const MyClass = class {}`)을 통해 정의되며, 내부적으로는 함수로 처리됩니다. |
+| 생성자 함수 | 전통적인 자바스크립트에서 객체 생성을 위해 사용되는 생성자 함수(constructor function)와 클래스는 유사한 역할을 합니다. 하지만 클래스 문법은 생성자 함수보다 훨씬 명확하고 직관적인 객체 지향 프로그래밍을 가능하게 합니다. |
+| 함수로서의 속성 | 클래스를 콘솔에 출력하면 함수로 표시됩니다. 이는 자바스크립트 엔진이 클래스를 함수로 처리하기 때문입니다. |
+| 메서드 정의 | 클래스 내부에서 메서드를 정의할 때는 함수 문법을 사용합니다. |
+
+- constructor
+
+| 구분 | 설명 |
+|------|------|
+| 선택 사항 | 클래스에서 `constructor`를 생략할 수 있습니다. 이 경우, 자바스크립트 엔진이 기본 `constructor`를 자동으로 제공합니다. |
+| 자동 생성 | `constructor`가 명시적으로 정의되지 않은 경우, 클래스는 빈 `constructor`를 가지고 있는 것으로 간주됩니다. 즉, 인스턴스를 생성할 때 아무런 작업도 수행하지 않는 기본 생성자가 존재하는 것과 동일합니다. |
+| 초기화 작업 | `constructor`를 사용하는 주된 이유는 새로 생성된 객체의 초기 상태를 설정하는 것입니다. 속성 값을 설정하거나 필요한 초기화 작업을 수행합니다. |
+| 상속에서의 역할 | 상속받은 클래스에서 `constructor`를 정의할 때는 `super` 키워드를 사용하여 부모 클래스의 `constructor`를 호출해야 합니다. 이것은 부모 클래스의 생성 로직을 실행시키기 위해 필요합니다. |
+
+constructor 메서드는 클래스에서 객체를 생성하고 초기화하는데 사용되지만, 모든 클래스에 반드시 있어야 하는 것은 아닙니다. 예를 들어, constructor가 없는 간단한 클래스는 다음과 같이 정의할 수 있습니다.
+
+```js
+class MyClass {
+  myMethod() {
+    console.log('Hello, World!');
+  }
+}
+
+const myInstance = new MyClass();
+myInstance.myMethod(); // "Hello, World!" 출력
+```
+
+- Private과 Protected 프로퍼티와 메서드
+
+| 유형 | 설명 |
+|------|------|
+| private 프로퍼티/메서드 | 클래스 내부에서만 접근 및 사용이 가능한 프로퍼티나 메서드입니다. JavaScript에서는 private 필드를 `#` 기호를 사용하여 선언합니다. 이는 클래스 외부에서 접근할 수 없어 데이터 캡슐화와 보안성을 향상시킵니다. |
+| protected 프로퍼티/메서드 | 클래스 자체와 그 자식 클래스에서만 접근할 수 있는 프로퍼티나 메서드입니다. JavaScript에서는 공식적인 `protected` 지원이 없지만, 관례적으로 `_` (언더스코어) 접두사를 사용하여 표시하는 경우가 많습니다. |
+
+
+```js
+class MyClass {
+  #privateField;   // private 프로퍼티 선언. 클래스 내부에서만 접근 가능합니다.
+  _protectedField; // protected 프로퍼티 선언. 클래스 내부와 상속받은 자식 클래스에서 접근 가능합니다.
+
+  constructor() {
+    this.#privateField = "private";     // private 프로퍼티 초기화
+    this._protectedField = "protected"; // protected 프로퍼티 초기화
+  }
+
+  #privateMethod() {
+    console.log('이것은 private 메서드입니다.'); // private 메서드 정의. 클래스 내부에서만 호출 가능합니다.
+  }
+
+  _protectedMethod() {
+    console.log('이것은 protected 메서드입니다.'); // protected 메서드 정의. 클래스 내부와 상속받은 자식 클래스에서 호출 가능합니다.
+  }
+}
+
+const myInstance = new MyClass(); // MyClass의 인스턴스 생성
+// myInstance.#privateField;  // SyntaxError. Private 필드에 외부에서 접근 시도, 접근할 수 없습니다.
+// myInstance.#privateMethod();  // SyntaxError. Private 메서드에 외부에서 호출 시도, 호출할 수 없습니다.
+console.log(myInstance._protectedField); // protected 필드 접근 가능. 출력: "protected"
+myInstance._protectedMethod(); // protected 메서드 호출 가능. 출력: "이것은 protected 메서드입니다."
+```
