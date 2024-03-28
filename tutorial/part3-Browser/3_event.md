@@ -300,7 +300,7 @@ UI 이벤트: resize, scroll
   </div>
   <script>
     // 커스텀 이벤트 생성
-    let myEvent = new CustomEvent("myEvent", { // "myEvent"라는 이름의 커스텀 이벤트를 생성합니다.
+    let myEvent = new CustomEvent("myEvent", { // "myEvent"라는 이름의 커스텀 이벤트를 생성합니다. 
       detail: { message: "소금빵!" } // 커스텀 이벤트에는 "소금빵!"이라는 메시지를 포함하는 detail 속성이 있습니다.
     });
 
