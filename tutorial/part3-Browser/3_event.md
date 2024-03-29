@@ -283,7 +283,8 @@ UI 이벤트: resize, scroll
 | 이벤트 리스너 추가 | `addEventListener` 메소드를 사용하여 DOM 요소에 이벤트 리스너를 추가합니다. 이 리스너는 커스텀 이벤트가 디스패치될 때 호출됩니다. 이벤트 리스너는 이벤트의 상세 정보에 접근할 수 있으며, 이를 기반으로 특정 로직을 수행할 수 있습니다. | `element.addEventListener(eventName, handler)` |
 | 이벤트 흐름 | 커스텀 이벤트도 표준 DOM 이벤트처럼 버블링(bubbling) 또는 캡처(capturing) 단계를 통해 전파될 수 있습니다. 이벤트 생성 시 `bubbles`와 `cancelable` 옵션을 설정하여 이러한 동작을 제어할 수 있습니다. | `new CustomEvent(eventName, { bubbles: true, cancelable: true })` |
 
-> "디스패치(dispatch)"란 특정한 작업이나 명령을 수행하도록 요청하거나 전달하는 것을 의미합니다. 컴퓨터 과학 분야에서 이 용어는 주로 이벤트 기반 시스템에서 사용됩니다.
+> "디스패치(dispatch)"란 특정한 작업이나 명령을 수행하도록 요청하거나 전달하는 것을 의미합니다. 컴퓨터 과학 분야에서
+ 이 용어는 주로 이벤트 기반 시스템에서 사용됩니다.
 
 ```html
 <!DOCTYPE html>
@@ -300,7 +301,8 @@ UI 이벤트: resize, scroll
   </div>
   <script>
     // 커스텀 이벤트 생성
-    let myEvent = new CustomEvent("myEvent", { // "myEvent"라는 이름의 커스텀 이벤트를 생성합니다. 
+    let myEvent = new CustomEvent("myEvent", { // "myEvent"라는 이름의 커스텀 이벤트를 생성합니다.
+
       detail: { message: "소금빵!" } // 커스텀 이벤트에는 "소금빵!"이라는 메시지를 포함하는 detail 속성이 있습니다.
     });
 
