@@ -1,14 +1,3 @@
-### UVC Front-end 2024
-
-4/3 수 - IDE, Git, Part1  
-4/4 목 - Part2  
-4/5 금 - Part2  
-4/8 월 - Part2  
-4/9 화 - Part3  
-4/11 목 - Part3, basic  
-4/12 금 - Mini Project
-
-
 ## submodule
 
 - settings

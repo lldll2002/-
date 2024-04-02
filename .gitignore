@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+tutorial/mini-project/*
+
+package-lock.json
+package.json
+index.html
+script.js
+server.js
+tasks.md
