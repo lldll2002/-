@@ -1,0 +1,6 @@
+[submodule "basic"]
+	path = basic
+	url = https://github.com/js-diffusion/basic
+[submodule "settings"]
+	path = settings
+	url = https://github.com/js-diffusion/settings
