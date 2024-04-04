@@ -12,6 +12,13 @@
 
   <span style="color: orange;">2. 변수 명명규칙</span>  
 
+```js
+  var abc = 'abc'
+  let abcd = 'a'
+  const abcde = 'b'
+```
+
+
   | 구분 | 설명 |
   |-----|-----|
   | 변수 이름   | `문자`, `숫자`, `$`, `_` 사용 가능 |

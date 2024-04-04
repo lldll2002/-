@@ -74,23 +74,25 @@ person.isOpen = false;    // 속성 값 변경
 console.log(person);      // 객체의 전체 데이터 확인
 console.log(person.name); // Alice
 
-// 배열
+// 배열  0번부터 시작해서 [1]을 입력하면 바나나가 나옴
 const fruits = ['apple', 'banana', 'cherry'];
 console.log(fruits[1]); // banana
 
-// 함수
+// 함수 greet(이름)안에 값이 리턴되어서 헬로 엘리스
 function greet(name) {
   return 'Hello ' + name;
 }
 console.log(greet('Alice')); // Hello Alice
 
-// 날짜
-const studyDay = new Date();
-const studyString = studyDay.toISOString().split('T')[0];
-console.log(studyString);
-console.log(studyDay);
-console.log(studyDay.toString());
-console.log(studyDay.getFullYear(), studyDay.getMonth(), studyDay.getDate())
+// 날짜 
+const studyDay = new Date(); // studyday를 새 날짜'new Date()'로 선언'const' 한다
+const studyString = studyDay.toISOString().split('T')[0]; //toISOString은 yyyy-mm-dd형식으로 표현해주는 것
+console.log(studyString); // 2024-04-04
+console.log(studyDay); // 바꾼게 없으니까 new date 그대로 나옴
+console.log(studyDay.toString()); // 2024-04-04
+console.log(studyDay.getFullYear(), //2024
+studyDay.getMonth(), // 4
+studyDay.getDate()) // 4
 
 // 정규표현식
 const pattern = /[a-zA-Z]+/g;
@@ -99,20 +101,23 @@ console.log(result); // true
 
 // 에러
 try {
-  throw new Error('Something went wrong');
-} catch (e) {
+  throw new Error('Something went wrong'); //이 에러가 발생하게 되면
+} catch (e) { // 이것을 캐치한다
   console.error(e.message); // Something went wrong
 }
 
 // 내장 객체
 console.log(Math.random()); // 0과 1 사이의 랜덤한 숫자
-console.log(Number.parseInt('10', 10)); // 10
+console.log(Number.parseInt('10', 10)); // 10 10진수 숫자의 10을 표현하면 10이다
 
 // 전역 객체
-console.log(globalThis.location.href); // 브라우저 환경
+console.log(globalThis.location.href); // 브라우저 환경 브라우저 상의 현재 주소를 알 수 있음
 console.log(globalThis.process.version); // Node.js 환경
-```
 
+
+ // 웹상에서 console 창에서 window를 찾으면 전체 객체리스트를 볼 수 있다.
+
+```
 - 객체 메서드
 
 | 객체 메서드 | 설명 |
@@ -180,7 +185,7 @@ console.log("Object.assign():", mergedObject);
 const breads = [];
 
 // 배열에 요소 추가
-breads.push("소금빵", "초코빵", "치즈빵");
+breads.push("소금빵", "초코빵", "치즈빵"); // 순서대로 0번째, 1번째, 2번째 (0번 부터 시작)
 console.log(breads.length); // 3
 
 // 원하는 인덱스에 새 요소 추가
@@ -212,7 +217,7 @@ console.log(breads); // ['소금빵', '초코빵']
 | [concat()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) | 두 개 이상의 배열을 병합하는 데 사용, 새 배열을 반환 |
 | [filter()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) | 주어진 배열의 일부에 대한 얕은 복사본을 생성하고, 주어진 함수에 의해 구현된 테스트를 통과한 요소로만 필터링 |
 | [map()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map) | 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환 |
-| [slice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) | 어떤 배열의 `begin` 부터 `end` 까지(`end` 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환 |
+| [slice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) | 어떤 배열의 `begin` 부터 `end` 까지(`end` 미포함)에 대한 얕은 복사본을 새로운 배열 객체로 반환(slice(2)라면, array 중 두 번째 까지 자르고 그 다음것 들을 사용한다ㄴ) |
 | [sort()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) | 배열의 요소를 적절한 위치에 정렬한 후 그 배열을 반환 |
 | [splice()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) | 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경 |
 | [forEach()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) | 각 배열 요소에 대해 제공된 함수를 한 번씩 실행 |
@@ -238,7 +243,7 @@ console.log(breads); // ['소금빵', '초코빵']
 | [reduceRight()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) | 배열의 각 요소에 대해 함수를 오른쪽에서 왼쪽으로 적용하고 단일 출력 값을 반환 |
 | [fill()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/fill) | 배열의 지정된 범위를 정해진 값으로 채움 |
 | [from()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from) | 유사 배열 또는 반복 가능한 객체를 얕은 복사하여 새 배열 객체 생성 |
-| [isArray()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) | 주
+| [isArray()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray) | Array.isArray() 정적 메서드는 전달된 값이 Array인지 판단합니다.
 
 
 
