@@ -27,8 +27,8 @@ let person = {
 console.log(person.name); // 'Alice'
 person.greet(); // 'Hello!'
 
-// Stack
-let stack = [];
+// Stack            우선적으로 Stack 초기화를 해줌
+let stack = [];       //초기화를 위해서 []를 사용함
 stack.push(1); // 스택에 추가
 stack.push(2);
 console.log(stack.pop()); // 마지막 요소 제거하고 반환 (2)
